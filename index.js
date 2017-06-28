@@ -2,9 +2,7 @@ const hbs = require('express-hbs');
 const express = require('express')
 const app = express()
 
-app.listen(3000, function () {
-  console.log('Starting youOttawa on port 3000!')
-})
+app.listen(process.env.PORT || 3000)
 
 app.engine('hbs', hbs.express4({
   partialsDir: __dirname + '/views/'
