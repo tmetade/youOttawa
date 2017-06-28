@@ -1,9 +1,14 @@
-.w500{
+#login-logo{
+	height:70px;
+}
+
+
+.login-card-width{
 	width:500px;
 }
 
-.h500{
-	height:500px;
+.login-card-height{
+	height:265px;
 }
 
 .centered{
@@ -26,5 +31,10 @@
 
 .ui.card{
 	width:500px !important;
-	height:inherit !important;
+}
+
+.container{
+	height:100%;
+	background-image: url('../images/login-bg.jpg');
+	background-size: contain;
 }

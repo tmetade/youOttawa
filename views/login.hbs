@@ -2,21 +2,26 @@
 	<head>
 	<title>{{title}}</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/login.css"
+	<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<script src="dist/semantic.min.js"></script>
+	<script src="scripts/login.js"></script>
 	</head>
 
 	<body>
 		<div class="container centered">
 
-			<div class="ui card middle aligned center aligned grid w500 h500">
+			<div class="ui card middle aligned center aligned grid login-card-width">
 			  <div class="column">
 			    <h2 class="ui maroon-text image header">
 			      <div class="content">
-			        Log-in to your account
+			        <img src="images/youOttawa.png" id="login-logo"> 
 			      </div>
 			    </h2>
 			    <form class="ui large form">
-			      <div class="ui segment">
+			      <div class="ui">
 			        <div class="field">
 			          <div class="ui left icon input">
 			            <i class="user icon"></i>
@@ -38,9 +43,6 @@
 
 			    </form>
 
-			    <div class="ui message">
-			      New to us? <a href="#">Sign Up</a>
-			    </div>
 			  </div>
 			</div>
 		</div>
