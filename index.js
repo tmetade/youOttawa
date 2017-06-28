@@ -14,6 +14,11 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 
+app.use(express.static(__dirname + '/semantic'));
+app.use(express.static(__dirname + '/public'));
+
+
+
 app.get('/', function (req, res) {
 	res.render('login', {
 	  title: 'Login',

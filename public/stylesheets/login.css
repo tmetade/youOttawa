@@ -1,0 +1,30 @@
+.w500{
+	width:500px;
+}
+
+.h500{
+	height:500px;
+}
+
+.centered{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maroon-text{
+	color: #8f001a !important;
+}
+
+.maroon-bg{
+	background-color: #8f001a !important;
+}
+
+.white-text{
+	color:#fff !important;
+}
+
+.ui.card{
+	width:500px !important;
+	height:inherit !important;
+}

@@ -1,22 +1,48 @@
 <html>
 	<head>
 	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/login.css"
 	</head>
 
 	<body>
-		<div id="main-block">
-			<div id="username">
-			
-			</div>
+		<div class="container centered">
 
-			<div id="password">
+			<div class="ui card middle aligned center aligned grid w500 h500">
+			  <div class="column">
+			    <h2 class="ui maroon-text image header">
+			      <div class="content">
+			        Log-in to your account
+			      </div>
+			    </h2>
+			    <form class="ui large form">
+			      <div class="ui segment">
+			        <div class="field">
+			          <div class="ui left icon input">
+			            <i class="user icon"></i>
+			            <input type="text" name="email" placeholder="E-mail address">
+			          </div>
+			        </div>
+			        <div class="field">
+			          <div class="ui left icon input">
+			            <i class="lock icon"></i>
+			            <input type="password" name="password" placeholder="Password">
+			          </div>
+			        </div>
+			        <div class="ui fluid large maroon-bg white-text submit button">
+			        Login
+			        </div>
+			      </div>
 
-			</div>
+			      <div class="ui error message"></div>
 
-			<div id="submit">
+			    </form>
 
+			    <div class="ui message">
+			      New to us? <a href="#">Sign Up</a>
+			    </div>
+			  </div>
 			</div>
 		</div>
-
 	</body>
 </html>
