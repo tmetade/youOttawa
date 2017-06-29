@@ -1,0 +1,41 @@
+.header-height{
+	height:45px;
+}
+
+.border-bottom{
+	border-bottom: 2px solid #efefef;
+}
+
+.flex{
+	display:flex;
+}
+
+#header-logo{
+	height:42px;
+}
+
+.centered{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile{
+	height: 23px;
+    /* float: right; */
+    position: absolute;
+    /* display: flex; */
+    right: 0;
+    margin-right: 20px;
+    cursor:pointer;
+}
+
+#news{
+	height: calc(100% - 45px);
+    width: 25%;
+    float: right;
+}
+
+.border-left{
+	border-left: 2px solid #efefef;
+}

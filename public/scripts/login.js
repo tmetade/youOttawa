@@ -10,7 +10,15 @@
             }
           ]
         }, 
-        password: ['minLength[6]', 'empty']
+        password: {
+          identifier  : 'password',
+          rules: [
+            {
+              type   : 'password',
+              prompt : 'Please enter a valid password that contains atleast 6 characters'
+            }
+          ]
+        }
       }
     });
 });
