@@ -39,3 +39,28 @@
 .border-left{
 	border-left: 2px solid #efefef;
 }
+
+.vertical{
+	flex-direction: column;
+}
+
+.feed{
+	    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.comment > .avatar > img{
+	height: 35px !important;
+    width: auto !important;
+}
+
+.ui.comments{
+    overflow-y: scroll;
+    margin: 0.25em 0 0 0 !important;
+}
+
+.comment{
+	border-bottom: 1px solid #efefef !important;
+    padding: 0.5em 0 0 0.5em !important;
+}
