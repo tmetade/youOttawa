@@ -63,10 +63,29 @@ app.post('/submit', function(req, res) {
 });
 
 
+var feed = [{
+	"source": "Twitter",
+	"age": "2 days",
+	"content": "Gee-gees expected to face Carleton Ravens in Panda Bowl Cup this October, buy your tickets now!"
+},
+{
+	"source": "UoZone",
+	"age": "3 days",
+	"content": "Exam schedules are up, go to My Exam Schedule to view it!"
+},
+{
+	"source": "Brightspace",
+	"age": "4 months",
+	"content": "Your mark for Assignment three has been updated! Click here to see it!"
+}];
+
+
+
 app.get('/index', function(req, res){
 	res.render('index', {
 		title: 'youOttawa',
-		layout: null
+		layout: null,
+		feed: feed
 	})
 })
 
