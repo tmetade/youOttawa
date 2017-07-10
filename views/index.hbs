@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<title>{{title}}</title>
-	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/semantic.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
@@ -48,7 +48,7 @@
 
 		<div class="ui grid content">
 
-			<div id="applications" class="ten wide column">
+			<div id="applications" class="twelve wide column">
 
 <!-- 				<div class="ui items">
 				  <div class="item">
@@ -72,28 +72,27 @@
 
 
 
-			<div id="news" class="border-left six wide column flex vertical">
+			<div id="news" class="border-left four wide column flex vertical">
 				<div class="feed border-bottom">Feed</div>
 
 				<div class="ui divided comments">
+				{{#each feed}}
+				  <div class="comment">
+				    <div class="content">
+				      <a class="author">{{title}}</a>
+				      <div class="metadata">
+				        <div class="date">{{age}} via {{source}}</div>
+				        <div class="rating">
+				          <i class="star icon"></i>
+				        </div>
+				      </div>
+				      <div class="text">
+				        At {{time}} happening at {{location}}
+				      </div>
+				    </div>
+				  </div>
 
-					{{#each feed}}
-					<div class="comment">
-					    <div class="content">
-					      <a class="author">{{source}}</a>
-					        <div class="metadata">
-						        <div class="date">{{age}} via {{source}}</div>
-						        <div class="rating">
-						          <i class="star icon"></i>
-						        </div>
-					        </div>
-					        <div class="text">
-					          {{content}}
-					        </div>
-					    </div>
-					</div>
-
-					{{/each}}			 
+				{{/each}}
 				</div>
 			</div>
 		</div>
