@@ -64,3 +64,25 @@
 	border-bottom: 1px solid #efefef !important;
     padding: 0.5em 0 0 0.5em !important;
 }
+
+.profileIcon{
+    height:25px;
+    margin-bottom:5px;
+    margin-left:10px;
+}
+
+.ui.popup{
+    min-width:400px !important;
+}
+
+.profilePic{
+    padding:5px;
+    width:100%;
+}
+
+.studentInfo{
+    margin:0;
+    color:grey;
+    padding:5px;
+    font-size: 15px;
+}

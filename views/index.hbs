@@ -6,7 +6,6 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 	<script src="dist/semantic.min.js"></script>
-
 	<script src="scripts/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 
@@ -16,10 +15,38 @@
 	<body>
 		<header class="maroon-bg header-height border-bottom flex centered">
 			<img id="header-logo" src="images/youOttawa.png">
-			<img id="profile" src="images/profile.png">
+			<img id="profile" data-html="
+			<div class='ui grid content'>
+				<div class='five wide column'>
+					<img class='profilePic' src='images/rohan.jpg'>
+				</div>
+				<div class='eleven wide column'>
+					<table class='studentInfo'>
+						<tr style='padding-bottom:5px;'>
+							<td>Name:</td>
+							<td>Rohan Kanjani<td>
+						</tr>
+						<tr>
+							<td style='padding-right:5px;'>Student #:</td>
+							<td>1234567<td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td>rkanj123@uottawa.ca<td>
+						</tr>
+						<tr>
+							<td>Faculty of Arts</td>
+						</tr>
+						<tr>
+							<td>Major - English</td>
+						</tr>
+					</table>
+				</div>
+			</div>"
+			src="images/profile.png">
 		</header>
 
-		<div id="ui grid content">
+		<div class="ui grid content">
 
 			<div id="applications" class="ten wide column">
 
@@ -48,34 +75,27 @@
 			<div id="news" class="border-left six wide column flex vertical">
 				<div class="feed border-bottom">Feed</div>
 
-
 				<div class="ui divided comments">
 
-				{{#each feed}}
-				  <div class="comment">
-				    <div class="content">
-				      <a class="author">{{source}}</a>
-				      <div class="metadata">
-				        <div class="date">{{age}} via {{source}}</div>
-				        <div class="rating">
-				          <i class="star icon"></i>
-				        </div>
-				      </div>
-				      <div class="text">
-				        {{content}}
-				      </div>
-				    </div>
-				  </div>
+					{{#each feed}}
+					<div class="comment">
+					    <div class="content">
+					      <a class="author">{{source}}</a>
+					        <div class="metadata">
+						        <div class="date">{{age}} via {{source}}</div>
+						        <div class="rating">
+						          <i class="star icon"></i>
+						        </div>
+					        </div>
+					        <div class="text">
+					          {{content}}
+					        </div>
+					    </div>
+					</div>
 
-				{{/each}}
-
-
-				  				 
+					{{/each}}			 
 				</div>
-
-
 			</div>
-
 		</div>
 	</body>
 </html>

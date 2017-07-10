@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  .popup({
 	    on: 'click',
 	        title   : 'Popup Title',
-    content : 'Hello I am a popup'
+    		content : 'Hello I am a popup'
 	  });
 });
