@@ -65,6 +65,28 @@
     padding: 0.5em 0 0 0.5em !important;
 }
 
+.profileIcon{
+    height:25px;
+    margin-bottom:5px;
+    margin-left:10px;
+}
+
+.ui.popup{
+    min-width:400px !important;
+}
+
+.profilePic{
+    padding:5px;
+    width:100%;
+}
+
+.studentInfo{
+    margin:0;
+    color:grey;
+    padding:5px;
+    font-size: 15px;
+}
+
 .ui.grid > .column:not(.row), .ui.grid > .row > .column{
 	padding-left:0 !important;
 	padding-right:0 !important;
@@ -76,6 +98,7 @@
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
 }
+
 
 .ui.grid{
 	padding-left: 1rem !important;
@@ -101,3 +124,4 @@
 a, a:hover, a:visited{
 	color:#99162e !important;
 }
+
