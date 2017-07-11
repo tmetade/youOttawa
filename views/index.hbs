@@ -23,23 +23,26 @@
 
 			<div id="applications" class="twelve wide column">
 
-<!-- 				<div class="ui items">
-				  <div class="item">
-				    <div class="ui small image">
-				      <img src="/images/wireframe/image.png">
-				    </div>
+				<div class="ui items">
+
+				{{#each links}}
+
+				  <a class="item" href="{{url}}">
 				    <div class="content">
-				      <div class="header">Astrology Camp</div>
-				      <div class="meta">
+				      <div class="header">{{title}}</div>
+<!-- 				      <div class="meta">
 				        <span class="price">$1600</span>
 				        <span class="stay">6 Weeks</span>
-				      </div>
+				      </div> -->
 				      <div class="description">
-				        <p></p>
+				        <p>{{description}}</p>
 				      </div>
 				    </div>
-				  </div>
-				</div> -->
+				  </a>
+
+				{{/each}}
+
+				</div>
 
 			</div>
 

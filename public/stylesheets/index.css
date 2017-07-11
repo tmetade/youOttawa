@@ -71,8 +71,33 @@
 }
 
 .ui.grid > .column:not(.row) {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
+}
+
+.ui.grid{
+	padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+#applications{
+	overflow: scroll;
+    height: calc(100% - 45px);
+}
+
+.content{
+	width: inherit;
+    height: inherit;
+}
+
+.item{
+	    width: 200px;
+    height: 65px;
+    overflow-wrap: break-word;
+}
+
+a, a:hover, a:visited{
+	color:#99162e !important;
 }
