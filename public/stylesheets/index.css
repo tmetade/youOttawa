@@ -44,6 +44,10 @@
 	flex-direction: column;
 }
 
+.horizontal{
+	flex-direction: row;
+}
+
 .feed{
 	    font-size: 20px;
     padding: 10px;
@@ -65,7 +69,6 @@
     padding: 0.5em 0 0 0.5em !important;
 }
 
-<<<<<<< HEAD
 .profileIcon{
     height:25px;
     margin-bottom:5px;
@@ -87,16 +90,79 @@
     padding:5px;
     font-size: 15px;
 }
-=======
+
 .ui.grid > .column:not(.row), .ui.grid > .row > .column{
 	padding-left:0 !important;
 	padding-right:0 !important;
 }
 
 .ui.grid > .column:not(.row) {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
 }
->>>>>>> ee205d5e6e5f7263cd5b2d3232455aa92c794ca3
+
+
+.ui.grid{
+	padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+#applications{
+	overflow: scroll;
+    height: calc(100% - 45px);
+}
+
+
+.ui.application{
+	width: 200px !important;
+    height: 65px !important;
+    overflow-wrap: break-word;
+    margin-right: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+a, a:hover, a:visited{
+	color:#99162e !important;
+}
+
+.ui.popup > .ui.grid > .no-margin-top{
+	margin-top:0 !important;
+}
+
+.ui.popup > .ui.grid > .no-margin-bottom{
+	margin-bottom:0 !important;
+}
+
+.ui.segment:first-child {
+     margin-top: 1em !important; 
+}
+
+.flex-wrap{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.ui.rating{
+	float: right;
+    right: 0;
+}
+
+a.header{
+	font-size:0.9rem;
+}
+
+.invisible{
+	visibility: hidden;
+}
+
+.width80p{
+	width:80%;
+}
+
+.button-toggle{
+	background-color: #99162e !important;
+    color: #fff !important;
+}

@@ -1,0 +1,214 @@
+[{
+"title": "Student Center (NEW)",
+"description":"Open your Student Center. Under the uoZone Applications tab, you can access the following Student Center features : Account Summary, Academic Requirements, Apply for Graduation, Candidate Center (graduate students with thesis), Enrol, Emergency Contacts, Financial Aid, Income Tax Forms, My Class Schedule, My Exam Schedule, My Grades, Payment Plan, Personal Information, Purchase official documents, Request Enrollment Verification (unofficial), Service Requests (graduate students), Unofficial Transcripts and What-if Report.",
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?languageCd=ENG"
+},{ 
+"title": "Account Summary",
+"description":"View your account summary. For step-by-step instructions, see this tutorial.",
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSF_SS_ACCT_SUMM.GBL?languageCd=ENG"
+},{ 
+"title": "Admission file",
+"description":"Find the information you need on your admission file.",
+"url": "https://uozone2.uottawa.ca/apps/admission"
+},{ 
+"title": "Alumboutique",
+"description":"Public - accessible to all site users",
+"url": "https://web4.uottawa.ca/webapp/wcs/stores/servlet/TopCategoriesDisplay?storeId=10152&catalogId=10152&langId=-1"
+},{ 
+"title": "Alumni Association Membership Card",
+"description":"Alumni Association Membership Card",
+"url": "https://uozone2.uottawa.ca/apps/alumni_membership"
+},{ 
+"title": "Appeal Request",
+"description":"Appeal request",
+"url": "https://uozone2.uottawa.ca/apps/appeal-request"
+},{ 
+"title": "Application for admission",
+"description":"Use this form if you have studied at the University of Ottawa or ever applied for admission, and wish to apply for admission to un undergraduate program. Refer to the PDF tutorial under this application for step-by-step instructions on how to use it.",
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/UO_MODS.UO_APP_DTL_CMP.GBL?languageCd=ENG"
+},{ 
+"title": "Apply for graduation",
+"description":"Apply for graduation. Refer to the PDF tutorial under this application for step-by-step instructions.",
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_GRAD_APPLY.GBL?languageCd=ENG"
+},{ 
+"title": "Bank-to-bank transfer for international students",
+"description":"Bank-to-bank transfer for international students",
+"url": "https://uozone2.uottawa.ca/apps/travelex"
+},{
+	"title": "Brightspace",
+	"description": "New Blackboard Learn",
+	"http://uottawa.brightspace.com"	
+},
+{ 
+"title": "Campus Map",
+"description":"Campus Map",
+"url": "http://maps.uottawa.ca/"
+},{ 
+"title": "Candidate Center",
+"description":"For graduate students with thesis, the Candidate Center simplifies the thesis and research management. Graduate students with thesis will also use the Service Requests application to view or update requests created in their Candidate Center. If you are not a graduate student, you will not have access to this application.  Refer to the PDF tutorial under this application for step-by-step instructions.",
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SSR_RS_SELFSERV_MGMT.SSS_RS_CAND_TASK.GBL?languageCd=ENG"
+},{ 
+"title": "CGPA Calculator",
+"description":"CGPA Calculator",
+"url": "https://uozone2.uottawa.ca/apps/average_calculator"
+},{ 
+"title": "CO-OP Navigator",
+"description":"Once you've registered at uOttawa, you can sign up for co-op programs in your discipline.",
+"url": "https://nav-coop-sso.uottawa.ca/CoopNav.Net/LoginSSO.aspx?culture=en-CA"
+},{ 
+"title": "Community Engagement Navigator",
+"description":"Volunteering and community engagement opportunities.",
+"url": "https://nav-cemc-cgce-sso.uottawa.ca/Community/LoginSSO.aspx?culture=en-CA"
+},{ 
+"title": "Course Evaluation (Blue)",
+"description":"Course Evaluation (Blue)",
+"url": "https://uottawa.bluera.com/uottawa"
+},{ 
+"title": "E-Travel",
+"description":"E-Travel",
+"url": "http://www.uottawa.ca/financial-resources/etravel"
+},{ 
+"title": "Email management",
+"description":"Manage email preferences for your @uOttawa.ca Google account.",
+"url": "https://uozone2.uottawa.ca/apps/email_management"
+},{ 
+"title": "Emergency Contacts",
+"description":"Add or update emergency contacts. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/CC_PORTFOLIO.SS_CC_EMERG_CNTCT.GBL?languageCd=ENG"
+},{ 
+"title": "Enrol",
+"description":"Enrol in (register for) courses. Use this application to add, drop and swap courses. For step-by-step instructions on how to enrol in your classes, use your shopping cart, add you name to a waitlist, drop a course or swap courses, see this tutorial. ", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_CART.GBL?languageCd=ENG"
+},{ 
+"title": "Evaluation of teaching and courses results (S-report)",
+"description":"Evaluation of teaching and courses results (S-report)", 
+"url": "https://uozone2.uottawa.ca/apps/s-reports"
+},{ 
+"title": "Financial Aid",
+"description":"View your financial aid, awards, work study navigator status and your financial questionnaire status. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_FA_AWARDS.GBL?languageCd=ENG"
+},{ 
+"title": "Financial questionnaire",
+"description":"This interactive tool allows you to declare your financial situation in order to complete your bursary applications. The tool also lets you update an already submitted budget to reflect changes in your financial situation.", 
+"url": "https://uozone2.uottawa.ca/apps/financial_questionnaire"
+},{ 
+"title": "Health and Dental Insurance Opt-Out",
+"description":"Health and Dental Insurance Opt-Out", 
+"url": "https://uozone2.uottawa.ca/apps/health_dental_insurance_opt_out"
+},{ 
+"title": "Health and Dental Insurance Opt-Out Admin",
+"description":"Health and Dental Insurance Opt-Out Admin", 
+"url": "https://uozone2.uottawa.ca/apps/health_dental_insurance_opt_out_admin"
+},{ 
+"title": "Housing Portal",
+"description":"Request housing and manage your residence account.", 
+"url": "https://uozone2.uottawa.ca/apps/housing"
+},{ 
+"title": "Income Tax Form",
+"description":"View, print and download your tax forms. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UO_INCM_TAX.GBL?languageCd=ENG"
+},{ 
+"title": "Jobs now",
+"description":"See job postings and use the job search tools", 
+"url": "https://nav-ed-jn-sso.uottawa.ca/JobsNow/LoginSSO.aspx?culture=en-CA"
+},{ 
+"title": "Library Search",
+"description":"Library Search", 
+"url": "http://biblio.uottawa.ca/en"
+},{ 
+"title": "Mentoring study groups and workshops",
+"description":"Mentoring study groups and workshops", 
+"url": "https://sassit.uottawa.ca/apps/ventus/workshops/"
+},{ 
+"title": "My Academic Requirements",
+"description":"View your program requirements and enrol in optional and compulsory courses. In My Academic Requirements you can view the courses completed, taken or enroled, as well as courses to complete to satisfy your program requirements. Once you have reviewed your Academic Requirements you can enrol in optional or compulsory courses and create a What-if Report. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SAA_SS_DPR_ADB.GBL?languageCd=ENG"
+},{ 
+"title": "My Class Schedule",
+"description":"View and print your weekly class schedule from your Student Center. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_LIST.GBL?languageCd=ENG"
+},{ 
+"title": "My Exam Schedule",
+"description":"View and print your exam schedule from your Student Center. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_EXAM_L.GBL?languageCd=ENG"
+},{ 
+"title": "My Grades",
+"description":"View your grades for each term and, if applicable, your academic standing. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_GRADE.GBL?languageCd=ENG"
+},{ 
+"title": "National and international student exchange program",
+"description":"Apply online to participate in a national or international exchange program through the International Office.", 
+"url": "https://uottawa.moveon4.com/form/547624770f9d305240000000/eng"
+},{ 
+"title": "Old WebMail",
+"description":"uOttawa webmail is the old student email tool. It is being phased out and replaced by Google Apps. New students will not use this ", 
+"url": "https://web.uottawa.ca/email/"
+},{ 
+"title": "Online Scholarships and Bursaries (New version)",
+"description":"Online Scholarships and Bursaries Application", 
+"url": "https://scholarships.uottawa.ca/saml2/login/"
+},{ 
+"title": "Password management",
+"description":"Password management", 
+"url": "https://accesuoaccess.uottawa.ca/itim/self/Home.do"
+},{ 
+"title": "Payment plan",
+"description":"Request a payment plan. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSF_SS_PPL_ENRL.GBL?languageCd=ENG"
+},{ 
+"title": "Personal Information",
+"description":"Update your personal information (home and mailing addresses, email addresses, phone numbers and preferred name). Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/CC_PORTFOLIO.SS_CC_DEMOG_DATA.GBL?languageCd=ENG"
+},{ 
+"title": "Program Change Request Form",
+"description":"Use this application to request a change to your program of study. For a summary of all the information you need to submit a request, go to the Making changes to your program page.", 
+"url": "https://uozone2.uottawa.ca/apps/mpe"
+},{ 
+"title": "Purchase Official Documents",
+"description":"Purchase official transcripts, official enrolment verification or a copy of your diploma. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UO_PRCHS_OFF_DOCS.GBL?languageCd=ENG"
+},{ 
+"title": "Refund request",
+"description":"Refund request", 
+"url": "https://uozone2.uottawa.ca/apps/ebilling/forms/refundrequest"
+},{ 
+"title": "ReproBoutique",
+"description":"ReproBoutique", 
+"url": "https://web4.uottawa.ca/webapp/wcs/stores/servlet/TopCategoriesDisplay?langId=-1&storeId=10052&catalogId=10052"
+},{ 
+"title": "Request Enrolment Verification (Unofficial)",
+"description":"Request enrolment verification (unofficial). Refer to the PDF tutorial under this application for step-by-step instructions. Note: To provide official proof of enrolment, access Purchase Official Documents in the uoZone Applications tab.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_ENRL_VER_REQ.GBL?languageCd=ENG"
+},{ 
+"title": "Service Requests",
+"description":"For graduate students, Service Requests simplify a number of administrative tasks that need to be completed by students and approved by their professors and/or faculties. If you are not a graduate student, you will not have access to this application.  Refer to the PDF tutorial under this application for step-by-step instructions", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SSR_RS_SELFSERV_MGMT.SSS_RS_STDNT_REQ.GBL?languageCd=ENG"
+},{ 
+"title": "Statement of Account",
+"description":"View your statement of account. For step-by-step instructions, see this tutorial.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UO_SSF_INV_STMT.GBL?languageCd=ENG"
+},{ 
+"title": "Unofficial Transcript",
+"description":"View or print an unofficial transcript or your grades. There is no cost for this task. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_TSRQST_UNOFF.GBL?languageCd=ENG"
+},{ 
+"title": "uoCampus-uoZone Knowledge Base",
+"description":"Find answers to commonly asked uoCampus questions. Search by entering a word or a phrase, navigate through the topics by category, or check the lists of most viewed and most useful answers. It includes step-by-step instructions, user guides, screen shots, and training material. The knowledge base is updated on a regular basis and is available 24x7.", 
+"url": "http://it.uottawa.ca/selfservice/uocampus-solution/"
+},{ 
+"title": "uOttawa card",
+"description":"Official University of Ottawa identification card", 
+"url": "https://carteuottawacard.uottawa.ca/login.aspx"
+},{ 
+"title": "Virtual Campus",
+"description":"Center for mediated teaching and learning.", 
+"url": "http://tlss.uottawa.ca/site/connection-to-the-lms"
+},{ 
+"title": "What if report",
+"description":"Create scenario-based What-If Reports after consulting your Academic Requirements. Refer to the PDF tutorial under this application for step-by-step instructions.", 
+"url": "https://www.uocampus.uottawa.ca/psp/csprpr9www/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SAA_SS_WHATIF_SEL.GBL?languageCd=ENG"
+},{ 
+"title": "Work Study Navigator",
+"description":"The Work-Study Program connects uOttawa students with campus jobs.", 
+"url": "https://nav-rte-ws-sso.uottawa.ca/WorkStudyNav.NET/LoginSSO.aspx?culture=en-CA"
+}]

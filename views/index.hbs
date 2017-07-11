@@ -17,10 +17,10 @@
 			<img id="header-logo" src="images/youOttawa.png">
 			<img id="profile" data-html="
 			<div class='ui grid content'>
-				<div class='five wide column'>
+				<div class='five wide column no-margin-top no-margin-bottom'>
 					<img class='profilePic' src='images/rohan.jpg'>
 				</div>
-				<div class='eleven wide column'>
+				<div class='eleven wide column no-margin-top no-margin-bottom'>
 					<table class='studentInfo'>
 						<tr style='padding-bottom:5px;'>
 							<td>Name:</td>
@@ -48,27 +48,54 @@
 
 		<div class="ui grid content">
 
-			<div id="applications" class="twelve wide column">
+		<div id="left" class="twelve wide column">
 
-<!-- 				<div class="ui items">
-				  <div class="item">
-				    <div class="ui small image">
-				      <img src="/images/wireframe/image.png">
-				    </div>
-				    <div class="content">
-				      <div class="header">Astrology Camp</div>
-				      <div class="meta">
-				        <span class="price">$1600</span>
-				        <span class="stay">6 Weeks</span>
-				      </div>
-				      <div class="description">
-				        <p></p>
-				      </div>
-				    </div>
-				  </div>
-				</div> -->
+			<div id="calAndKey" class="flex horizontal">
+				<div id="calendar" class="ui segment">
+
+				</div>
+
+				<div id="keyLinks" class="ui segment">
+
+				</div>
+			</div>
+
+
+			<div class="centered">
+
+				<button id="appsToggle" class="ui toggle button width80p ">
+				  View all applications
+				</button>
 
 			</div>
+
+			<div id="applications" class="invisible">
+
+				<div class="app-container ui segment flex-wrap">
+
+				{{#each links}}
+
+				  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
+				    <div class="content" >
+				      <a class="header" href="{{url}}">{{title}}</a>
+<!-- 				      <div class="meta">
+				        <span class="price">$1600</span>
+				        <span class="stay">6 Weeks</span>
+				      </div> -->
+				      	<div class="ui star rating" data-rating="0" data-max-rating="1">
+				        </div>
+				    </div>
+				  </div>
+
+				{{/each}}
+
+				</div>
+
+			
+			</div>
+
+		</div>
+
 
 
 

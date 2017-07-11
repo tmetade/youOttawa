@@ -4,6 +4,7 @@ const app = express()
 const formidable = require('express-formidable');
 var Horseman = require("node-horseman");
 var horseman = new Horseman({timeout: 10000});
+var applications = require(__dirname + '/data/applications.json');
 
 
 app.listen(process.env.PORT || 3000)
@@ -18,8 +19,8 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static(__dirname + '/semantic'));
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/data'));
 app.use(formidable());
-
 
 
 app.get('/', function (req, res) {
@@ -38,9 +39,10 @@ app.post('/submit', function(req, res) {
 
 	getUCalendarInfo().then(function(feed){
 		console.log("GOT THTE FEED BACK");
-		console.log(feed);
+		console.log(applications);
 
 		app.set('feed', feed)
+		app.set('links', applications)
 		res.redirect('/index');
 	}).catch(function(err){console.log("nope" + err)});
 
@@ -112,7 +114,7 @@ function getUCalendarInfo(){
 				        }
 						
 						if(actualContent.text() != ""){
-							
+
 							newsfeed[priIndex]["type"] = "event";
 
 						 	newsfeed[priIndex][context] = actualContent.text();
@@ -162,7 +164,8 @@ app.get('/index', function(req, res){
 	res.render('index', {
 		title: 'youOttawa',
 		layout: null,
-		feed: app.get('feed')
+		feed: app.get('feed'),
+		links: app.get('links')
 	})
 })
 
