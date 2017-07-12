@@ -119,9 +119,13 @@ function getUCalendarInfo(){
 
 						 	newsfeed[priIndex][context] = actualContent.text();
 
+						 	newsfeed[priIndex]["source"] = "uOCalendar";
+
 							if(context == "title"){
 								newsfeed[priIndex]["url"] = actualContent.attr("href");
 				            }
+
+
 				        }
 
 					

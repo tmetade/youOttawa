@@ -37,7 +37,7 @@
 },{
 	"title": "Brightspace",
 	"description": "New Blackboard Learn",
-	"http://uottawa.brightspace.com"	
+	"url" : "http://uottawa.brightspace.com"	
 },
 { 
 "title": "Campus Map",
