@@ -1,18 +1,21 @@
-<html>
+<html ng-app="youottawa">
 	<head>
 	<title>{{title}}</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="dist/semantic.min.js"></script>
+	<script src="scripts/semanticsInit.js"></script>
+
 	<script src="scripts/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 
 
 	</head>
 
-	<body>
+	<body ng-controller="mainController">
 		<header class="maroon-bg header-height border-bottom flex centered">
 			<img id="header-logo" src="images/youOttawa.png">
 			<img id="profile" data-html="
@@ -50,12 +53,20 @@
 
 		<div id="left" class="twelve wide column">
 
-			<div id="calAndKey" class="flex horizontal">
-				<div id="calendar" class="ui segment">
+			<div id="calAndKey" class="ui grid flex horizontal">
+				<div id="calendar" class="ui segment eleven wide column">
 
 				</div>
 
-				<div id="keyLinks" class="ui segment">
+				<div id="keyLinks" class="ui segment three wide column">
+
+					<div ng-repeat="link in keyLinks" class="ui segment application raised" data-content="{{link.description}}" href="{{url}}">
+					    <div class="content">
+					      <a class="header" ng-href="{{link.url}}">{{link.title}}</a>
+					      	<div class="ui star rating" data-rating="0" data-max-rating="1">
+					        </div>
+					    </div>
+				  	</div>
 
 				</div>
 			</div>
@@ -78,10 +89,6 @@
 				  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
 				    <div class="content" >
 				      <a class="header" href="{{url}}">{{title}}</a>
-<!-- 				      <div class="meta">
-				        <span class="price">$1600</span>
-				        <span class="stay">6 Weeks</span>
-				      </div> -->
 				      	<div class="ui star rating" data-rating="0" data-max-rating="1">
 				        </div>
 				    </div>
@@ -106,15 +113,12 @@
 				{{#each feed}}
 				  <div class="comment">
 				    <div class="content">
-				      <a class="author">{{title}}</a>
+				      <a class="author" href="{{url}}">{{title}}</a>
 				      <div class="metadata">
 				        <div class="date">{{age}} via {{source}}</div>
-				        <div class="rating">
-				          <i class="star icon"></i>
-				        </div>
 				      </div>
 				      <div class="text">
-				        At {{time}} happening at {{location}}
+				        {{time}} at {{location}} 
 				      </div>
 				    </div>
 				  </div>
