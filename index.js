@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const formidable = require('express-formidable');
 var Horseman = require("node-horseman");
-var horseman = new Horseman({timeout: 10000});
+var horseman = new Horseman({timeout: 10000, injectJquery: true, ignoreSSLErrors: true});
 var applications = require(__dirname + '/data/applications.json');
 
 
@@ -37,14 +37,18 @@ app.post('/submit', function(req, res) {
 	var auth = req.fields;
 	console.log(req.fields);
 
-	getUCalendarInfo().then(function(feed){
-		console.log("GOT THTE FEED BACK");
-		console.log(applications);
+	var feed = Promise.all([getFulcrumNews()]);
 
-		app.set('feed', feed)
+	feed.then(function(data){
+		console.log("GOT THTE FEED BACK");
+		console.log(data);
+
+		app.set('feed', data[0])
 		app.set('links', applications)
 		res.redirect('/index');
 	}).catch(function(err){console.log("nope" + err)});
+
+
 
 
 
@@ -74,14 +78,51 @@ app.post('/submit', function(req, res) {
 	// console.log(num);
 });
 
+function getFulcrumNews(){
+	return horseman
+			.on('resourceError', function(err) {
+			    console.log(err.message)
+			})
+			.open("http://thefulcrum.ca/category/news/uottawa/")
+			.evaluate(function(){
+
+					var fulcrumFeed = [];
+
+					jQuery("article").each(function(){
+							var article = {};
+
+							article["source"] = "Fulcrum";
+							article["type"] = "news";
+
+							var time = jQuery(this).find("time")[0];
+							article["time"] = jQuery(time).text();
+							
+							var url = jQuery(this).find("a")[0];
+							article["url"] = jQuery(url).attr("href");
+
+							var title = jQuery(this).find("a")[1];
+							article["title"] = jQuery(title).text();
+
+							fulcrumFeed.push(article);
+					})
+
+					return fulcrumFeed;
+
+				//} catch(err){console.log("failed due to error");}
+
+			}).close();
+}
+
 
 function getUCalendarInfo(){
 		return horseman
-		.open('http://uocal.uottawa.ca/en')
-		  .evaluate(function() {
+				.on('resourceError', function(err) {
+			    	console.log(err.message)
+				})	
+				.open('http://uocal.uottawa.ca/en')
+		  		.evaluate(function() {
 
 		  	try{
-
 				var newsfeed = {};
 				var totalItems = jQuery(".litecal-data").length;
 
@@ -135,13 +176,12 @@ function getUCalendarInfo(){
 				})
 
 				 return newsfeed;
- 
+			} catch(err){
+				return "Failed to process from uOCal";
+			}
 
-		  	} catch(err){
-		  		return "Unexpected error: " + err ;
-		  	}
 
-		  });
+		  }).close();
 }
 
 
