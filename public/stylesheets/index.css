@@ -166,3 +166,11 @@ a.header{
 	background-color: #99162e !important;
     color: #fff !important;
 }
+
+.window-height{
+	    height: calc(100% - 45px);
+}
+
+.scroll{
+	 overflow-y: scroll;
+}
