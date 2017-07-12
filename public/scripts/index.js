@@ -4,8 +4,13 @@ youottawa.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('%%');
   $interpolateProvider.endSymbol('%%');
 });
-// Define the `PhoneListController` controller on the `phonecatApp` module
-youottawa.controller('mainController', ["$scope", function MainController($scope) {
+
+youottawa.controller('mainController', ["$scope", "$http", function MainController($scope, $http) {
+
+	$http.get('applications.json')
+	  .then(function(data, status, headers, config) {
+	    $scope.applications = data.data;
+	  });
 
 	$scope.keyLinks = [{
 			"title": "Brightspace",
@@ -13,14 +18,10 @@ youottawa.controller('mainController', ["$scope", function MainController($scope
 			"url" : "http://uottawa.brightspace.com"	
 	}];
 
+
 	$scope.addLink = function(index){
-		var newLink = {
-			"title": "UoZone",
-			"description": "uOZone",
-			"url" : "http://uozone.uottawa.ca"	
-		}
-		$scope.keyLinks.push(newLink);
-		$scope.$apply();
+		console.log($scope.applications)
+		$scope.keyLinks.push($scope.applications[index]);
 	}
 
 

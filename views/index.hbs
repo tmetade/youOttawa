@@ -61,7 +61,15 @@
 
 				<div id="keyLinks" class="ui segment three wide column">
 					<p>Key Links</p>
-					<key-list></key-list>
+					
+					<div ng-repeat="link in keyLinks" class="ui segment " data-content="%%link.description%%" href="%%url%%">
+					   <div class="content">
+						<a class="header" href="%%link.url%%">%%link.title%%</a>
+				       </div>
+				    </div>
+
+
+
 				</div>
 			</div>
 
@@ -83,7 +91,7 @@
 				  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
 				    <div class="content" >
 				      <a class="header" href="{{url}}">{{title}}</a>
-				      	<div class="ui star rating" data-rating="0" data-max-rating="1" ng-click="addLink(2)">
+				      	<div class="ui star rating" data-rating="0" data-max-rating="1" ng-click="addLink({{@index}})">
 				        </div>
 				    </div>
 				  </div>
