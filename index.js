@@ -174,9 +174,31 @@ app.get('/index', function(req, res){
 })
 
 
+app.post('/logout', function(req, res) {
+	res.redirect('/login');
 
+	var auth = req.fields;
+	console.log(req.fields);
 
+	getUCalendarInfo().then(function(feed){
+		console.log("GOT THTE FEED BACK");
+		console.log(applications);
 
+		// app.set('feed', feed)
+		// app.set('links', applications)
+		res.redirect('/')
+	}).catch(function(err){console.log("nope" + err)});
+});
+
+app.get('/login', function(req, res){
+	console.log(app.get('feed'));
+	res.render('login', {
+		title: 'youOttawa',
+		layout: null,
+		feed: app.get('feed'),
+		links: app.get('links')
+	})
+})
 
 
 
