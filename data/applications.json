@@ -35,10 +35,11 @@
 "description":"Bank-to-bank transfer for international students",
 "url": "https://uozone2.uottawa.ca/apps/travelex"
 },{
-"title": "Brightspace",
-"description": "New Blackboard Learn",
-"url": "http://uottawa.brightspace.com"	
-},{ 
+	"title": "Brightspace",
+	"description": "New Blackboard Learn",
+	"url" : "http://uottawa.brightspace.com"	
+},
+{ 
 "title": "Campus Map",
 "description":"Campus Map",
 "url": "http://maps.uottawa.ca/"
