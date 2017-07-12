@@ -189,3 +189,15 @@ a.header{
 .link-title{
 	font-size: 1.17em;
 }
+
+.absolute{
+    position:absolute !important;
+}
+
+.left20{
+    left:20px;
+}
+
+.height30{
+    height:30px;
+}
