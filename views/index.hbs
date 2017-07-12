@@ -50,21 +50,21 @@
 			src="images/profile.png">
 		</header>
 
-		<div class="ui grid content">
+		<div class="ui grid content window-height">
 
-		<div id="left" class="twelve wide column">
+		<div id="left" class="twelve wide column scroll">
 
-			<div id="calAndKey" class="ui grid flex horizontal">
-				<div id="calendar" class="ui segment eleven wide column">
+			<div id="calAndKey" class="ui grid flex horizontal bottom-spacing">
+				<div id="calendar" class="ui segment eleven wide column space">
 
 				</div>
 
-				<div id="keyLinks" class="ui segment three wide column">
-					<p>Key Links</p>
+				<div id="keyLinks" class="ui segment items divided three wide column space text-center">
+					<p class="large">Key Links</p>
 					
-					<div ng-repeat="link in keyLinks" class="ui segment " data-content="%%link.description%%" href="%%url%%">
+					<div ng-repeat="link in keyLinks" class="ui item" data-content="%%link.description%%" href="%%url%%">
 					   <div class="content">
-						<a class="header" href="%%link.url%%">%%link.title%%</a>
+						<a class="link-title" href="%%link.url%%">%%link.title%%</a>
 				       </div>
 				    </div>
 
@@ -82,7 +82,7 @@
 
 			</div>
 
-			<div id="applications" class="invisible">
+			<div id="applications" class="invisible flex">
 
 				<div class="app-container ui segment flex-wrap">
 
