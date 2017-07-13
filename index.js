@@ -212,11 +212,3 @@ app.get('/index', function(req, res){
 		links: app.get('links')
 	})
 })
-
-
-
-
-
-
-
-
