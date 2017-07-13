@@ -28,15 +28,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$(".ui.rating").rating();
 
 	$("#appsToggle").on("click", function(){
-		$("#applications").toggleClass("invisible");
+		$(".link-container").toggleClass("invisible");
 		$(this).toggleClass("button-toggle")
+	})
+
+	$(".icon.angle").on("click", function(){
+		$(this).parent().parent().find(".drawer").toggleClass("invisible")
+
+		if($(this).hasClass("up"))
+			$(this).removeClass("up").addClass("down")
+		else 
+			$(this).removeClass("down").addClass("up")
 	})
 
 
 
 });
 
-<<<<<<< HEAD
 //GMAIL API
 
 	// Client ID and API key from the Developer Console
@@ -185,6 +193,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
       }
 
-
-=======
->>>>>>> 32be3f69aee2960f73b19fa9477b7844c17ac5fb
