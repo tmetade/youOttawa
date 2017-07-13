@@ -162,7 +162,7 @@ a.header{
 }
 
 .window-height{
-	    height: calc(100% - 45px);
+height: calc(100% - 33px);
 }
 
 .scroll{
@@ -270,4 +270,20 @@ a.header{
 
 .link-header{
     height: 25px;
+}
+
+.ui.items>.item>.image>img {
+    width: 100%;
+}
+
+.ui.items>.item>.image:not(.ui) {
+    width: 120px;
+}
+
+.ui.profile-section.items:last-child {
+    margin-bottom: 0!important;
+}
+
+#calendar{
+     width: 100%;
 }
