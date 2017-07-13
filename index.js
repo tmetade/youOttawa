@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/submit', function(req, res) {
-	// res.redirect('/index');
+	res.redirect('/index');
 
 	var auth = req.fields;
 	console.log(req.fields);

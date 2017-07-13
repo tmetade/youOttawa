@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(this).find(".icon.angle").removeClass("down").addClass("up")
 	})
 
-
-
 });
 
 //GMAIL API
