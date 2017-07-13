@@ -1,3 +1,8 @@
  document.addEventListener("DOMContentLoaded", function(event) {
-    $('.ui.form').form();
+    $('.ui.form').form({
+	    fields: {
+	      email    : 'empty',
+	      password   : 'empty',
+	    }
+    });
 });
