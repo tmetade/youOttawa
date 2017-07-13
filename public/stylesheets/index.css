@@ -205,3 +205,69 @@ a.header{
 .space-between{
     justify-content: space-between;
 }
+
+.ui.segment:first-child {
+    margin-top: 20px !important;
+}
+
+.ui.items:last-child {
+     margin-bottom: 20!important; 
+}
+
+.full-width{
+    width:100% !important;
+}
+
+.no-space-top{
+    margin-top: 0 !important;
+}
+
+.g-header{
+    height: 6% !important;
+}
+
+.angle.icon{
+    font-size: 2.3em;
+}
+
+.ui.segment{
+        padding: 1em 1em !important;
+}
+
+.header-spacing{
+        padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.top-space{
+    padding-top: 20px;
+}
+
+.link-container{
+    margin-left: -1.154em !important;
+    margin-right: -1.154em !important;
+}
+
+#news {
+    padding-top: 0rem !important;
+}
+
+.negative{
+    background-color: #940f0f !important; 
+}
+
+.align-left{
+    text-align: left;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.lh{
+    line-height: 37px;
+}
+
+.link-header{
+    height: 25px;
+}

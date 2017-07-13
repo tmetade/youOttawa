@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		$('.ui.search')
 		  .search({
-		    source: applications
+		    source: applications,
+		    maxResults: 4
 		  });
 	});
 
@@ -27,15 +28,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$(".ui.rating").rating();
 
 	$("#appsToggle").on("click", function(){
-		$("#applications").toggleClass("invisible");
+		$(".link-container").toggleClass("invisible");
 		$(this).toggleClass("button-toggle")
+	})
+
+	$(".ledge").on("click", function(){
+		$(this).parent().find(".drawer").toggleClass("invisible")
+
+		if($(this).find(".icon.angle").hasClass("up"))
+			$(this).find(".icon.angle").removeClass("up").addClass("down")
+		else 
+			$(this).find(".icon.angle").removeClass("down").addClass("up")
 	})
 
 
 
 });
 
-<<<<<<< HEAD
 //GMAIL API
 
 	// Client ID and API key from the Developer Console
@@ -184,6 +193,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
       }
 
-
-=======
->>>>>>> 32be3f69aee2960f73b19fa9477b7844c17ac5fb
