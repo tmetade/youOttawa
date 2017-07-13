@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+<<<<<<< HEAD
 //GMAIL API
 
 	// Client ID and API key from the Developer Console
@@ -184,3 +185,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
 
 
+=======
+>>>>>>> 32be3f69aee2960f73b19fa9477b7844c17ac5fb
