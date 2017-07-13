@@ -63,7 +63,6 @@
 
 		<div id="left" class="twelve wide column scroll">
 
-
 			<div id="calAndKey" class="flex horizontal">
 				<div id="calendar" class="ui segment">
 					<h1> Google Calendar </h1>
@@ -104,8 +103,6 @@
 				      </table>
 				</div>
 			</div>
-
-
 			<div class="centered">
 
 				<button id="appsToggle" class="ui toggle button width80p ">
@@ -262,34 +259,7 @@
             </td>\
             <td>'+getHeader(message.payload.headers, 'Date')+'</td>\
           </tr>'
-        );
-        $('body').append(
-          '<div class="modal fade" id="message-modal-' + message.id +
-              '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">\
-            <div class="modal-dialog modal-lg">\
-              <div class="modal-content">\
-                <div class="modal-header">\
-                  <button type="button"\
-                          class="close"\
-                          data-dismiss="modal"\
-                          aria-label="Close">\
-                    <span aria-hidden="true">&times;</span></button>\
-                  <h4 class="modal-title" id="myModalLabel">' +
-                    getHeader(message.payload.headers, 'Subject') +
-                  '</h4>\
-                </div>\
-                <div class="modal-body">\
-                  <iframe id="message-iframe-'+message.id+'" srcdoc="<p>Loading...</p>">\
-                  </iframe>\
-                </div>\
-              </div>\
-            </div>\
-          </div>'
-        );
-        $('#message-link-'+message.id).on('click', function(){
-          var ifrm = $('#message-iframe-'+message.id)[0].contentWindow.document;
-          $('body', ifrm).html(getBody(message.payload));
-        });
+        );  
       }
       function getHeader(headers, index) {
         var header = '';
@@ -336,3 +306,4 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 </html>
+
