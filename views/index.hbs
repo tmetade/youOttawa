@@ -65,7 +65,7 @@
 
 			<div id="calAndKey" class="ui grid flex horizontal">
 				<div id="calendar" class="ui segment space eleven wide column">
-					<div class="cal-header header-spacing flex horizontal space-between">
+					<div class="ledge cal-header header-spacing flex horizontal space-between">
 						<p class="large">Calendar</p>
 
 						<i class="angle up icon"></i>
@@ -75,13 +75,13 @@
 					</div>
 				</div>
 
-				<div id="keyLinks" class="ui segment items divided three wide column space text-center full-width">
-					<div class="link-header header-spacing flex horizontal space-between">
+				<div id="keyLinks" class="ui segment three wide column space text-center full-width">
+					<div class="ledge link-header header-spacing flex horizontal space-between">
 						<p class="large">Key Links</p>
 
 						<i class="angle up icon"></i>
 					</div>
-					<div class="drawer top-space">
+					<div class="ui items divided drawer ">
 						<div ng-repeat="link in keyLinks" class="ui item" data-content="%%link.description%%" href="%%url%%">
 						   <div class="content">
 							<a class="link-title" href="%%link.url%%">%%link.title%%</a>
@@ -93,17 +93,19 @@
 
 			<div id="gmailRow" class="flex horizontal space no-space-top">
 				<div id="gmail" class="ui segment full-width">
-					<div class="g-header flex horizontal space-between">
-						<p class="large">uOttawa Gmail</p>
+					<div class="ledge g-header flex horizontal space-between">
+						<p class="large lh">uOttawa Gmail</p>
 
-					    <button class="ui positive button" id="authorize-button" >Authorize</button>
-	    				<button class="ui positive button negative " id="signout-button" >Sign Out</button>
+						<div class="flex horizontal lh flex-end">
+						    <button class="ui positive button" id="authorize-button" >Authorize</button>
+		    				<button class="ui positive button negative " id="signout-button" >Sign Out</button>
 
-	    				<i class="angle up icon"></i>
+		    				<i class="angle up icon"></i>
+	    				</div>
 					</div>
 
 					<div class="drawer top-space">
-				      <table class="table table-striped table-inbox hidden">
+				      <table class="table table-striped table-inbox hidden align-left">
 				        <thead>
 				          <tr>
 				            <th>From</th>
@@ -121,7 +123,7 @@
 
 				<div class="app-container ui segment flex-wrap full-width">
 					
-					<div class="app-header flex horizontal space-between">
+					<div class="ledge app-header flex horizontal space-between">
 
 						<p class="large">All applications</p>
 
@@ -129,7 +131,7 @@
 
 					</div>
 
-					<div class="link-container invisible flex-wrap drawer top-space">
+					<div class="link-container invisible flex-wrap drawer">
 
 						{{#each links}}
 

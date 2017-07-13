@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$(this).toggleClass("button-toggle")
 	})
 
-	$(".icon.angle").on("click", function(){
-		$(this).parent().parent().find(".drawer").toggleClass("invisible")
+	$(".ledge").on("click", function(){
+		$(this).parent().find(".drawer").toggleClass("invisible")
 
-		if($(this).hasClass("up"))
-			$(this).removeClass("up").addClass("down")
+		if($(this).find(".icon.angle").hasClass("up"))
+			$(this).find(".icon.angle").removeClass("up").addClass("down")
 		else 
-			$(this).removeClass("down").addClass("up")
+			$(this).find(".icon.angle").removeClass("down").addClass("up")
 	})
 
 
