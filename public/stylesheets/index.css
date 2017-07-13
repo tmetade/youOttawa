@@ -287,3 +287,6 @@ height: calc(100% - 33px);
 #calendar{
      width: 100%;
 }
+.ledge{
+    cursor:pointer;
+}

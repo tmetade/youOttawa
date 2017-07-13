@@ -171,7 +171,7 @@
 					        <div class="date">%%article.age%% via %%article.source%%</div>
 					      </div>
 					      <div class="text">
-					        %%article.time%% at %%article.location%%
+					        %%article.time%%
 					      </div>
 					    </div>
 					  </div>
@@ -249,6 +249,7 @@
        *  Sign out the user upon button click.
        */
       function handleSignoutClick(event) {
+      	$(".ui.celled.table").remove();
         gapi.auth2.getAuthInstance().signOut();
       }
       /**
