@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+
+	$.getJSON( "applications.json", function(data) {
+		var applications = data;
+
+		$('.ui.search')
+		  .search({
+		    source: applications
+		  });
+	});
+
+
     $('#profile')
 	  .popup({
 	    on: 'click'
@@ -19,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$("#applications").toggleClass("invisible");
 		$(this).toggleClass("button-toggle")
 	})
+
+
 
 });
 
