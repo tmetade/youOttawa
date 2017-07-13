@@ -70,8 +70,8 @@
 
 						<i class="angle up icon"></i>
 					</div>
-					<div class="drawer top-space">
-						<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tmeta088%40uottawa.ca&amp;color=%235F6B02&amp;ctz=America%2FToronto" style="border-width:0" width="500" height="300" frameborder="0" scrolling="no"></iframe>
+					<div class="drawer">
+						<iframe id="calendar" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tmeta088%40uottawa.ca&amp;color=%235F6B02&amp;ctz=America%2FToronto" style="border-width:0" height="300"  frameborder="0" scrolling="no"></iframe>
 					</div>
 				</div>
 
@@ -159,20 +159,23 @@
 				<div class="feed border-bottom">Feed</div>
 
 				<div class="ui divided comments">
-				{{#each feed}}
-				  <div class="comment">
-				    <div class="content">
-				      <a class="author" href="{{url}}">{{title}}</a>
-				      <div class="metadata">
-				        <div class="date">{{age}} via {{source}}</div>
-				      </div>
-				      <div class="text">
-				        {{time}} at {{location}} 
-				      </div>
-				    </div>
-				  </div>
 
-				{{/each}}
+					  <div ng-show="feed == null" class="ui active inverted dimmer">
+					    <div class="ui text loader">Fetching feed</div>
+					  </div>
+
+					  <div ng-repeat="article in feed" class="comment">
+					    <div class="content">
+					      <a class="author" href="%%article.url%%">%%article.title%%</a>
+					      <div class="metadata">
+					        <div class="date">%%article.age%% via %%article.source%%</div>
+					      </div>
+					      <div class="text">
+					        %%article.time%% at %%article.location%%
+					      </div>
+					    </div>
+					  </div>
+
 				</div>
 			</div>
 		</div>

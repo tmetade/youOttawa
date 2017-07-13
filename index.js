@@ -37,16 +37,8 @@ app.post('/submit', function(req, res) {
 	var auth = req.fields;
 	console.log(req.fields);
 
-	var feed = Promise.all([getFulcrumNews()]);
 
-	feed.then(function(data){
-		console.log("GOT THTE FEED BACK");
-		console.log(data);
-
-		app.set('feed', data[0])
-		app.set('links', applications)
-		res.redirect('/index');
-	}).catch(function(err){console.log("nope" + err)});
+	res.redirect('/index');
 
 
 
@@ -185,30 +177,30 @@ function getUCalendarInfo(){
 }
 
 
-var feed = [{
-	"source": "Twitter",
-	"age": "2 days",
-	"content": "Gee-gees expected to face Carleton Ravens in Panda Bowl Cup this October, buy your tickets now!"
-},
-{
-	"source": "UoZone",
-	"age": "3 days",
-	"content": "Exam schedules are up, go to My Exam Schedule to view it!"
-},
-{
-	"source": "Brightspace",
-	"age": "4 months",
-	"content": "Your mark for Assignment three has been updated! Click here to see it!"
-}];
-
 
 
 app.get('/index', function(req, res){
-	console.log(app.get('feed'));
+
 	res.render('index', {
 		title: 'youOttawa',
 		layout: null,
-		feed: app.get('feed'),
-		links: app.get('links')
+		links: applications
 	})
 })
+
+app.get('/load-feed', function(req, res){
+	var feed = Promise.all([getFulcrumNews()]);
+
+	console.log('comes here');
+
+	feed.then(function(data){
+		console.log(data);		
+		res.send(JSON.stringify(data[0]));
+	}).catch(function(err){console.log("nope" + err)});
+})
+
+
+
+
+
+
