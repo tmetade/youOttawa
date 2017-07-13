@@ -1,11 +1,12 @@
 <html ng-app="youottawa">
 	<head>
 	<title>{{title}}</title>
-	<link rel="stylesheet" type="text/css" href="dist/semantic.css">
+	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
 	<script src="dist/semantic.min.js"></script>
 	<script src="scripts/semanticsInit.js"></script>
 
@@ -17,6 +18,15 @@
 
 	<body ng-controller="mainController">
 		<header class="maroon-bg header-height border-bottom flex centered">
+
+		<div class="ui search absolute left20">
+		  <div class="ui icon input height30">
+		    <input class="prompt" type="text" placeholder="Search applications...">
+		    <i class="search icon"></i>
+		  </div>
+		  <div class="results"></div>
+		</div>
+
 			<img id="header-logo" src="images/youOttawa.png">
 			<img id="profile" data-html="
 			<div class='ui grid content'>
@@ -49,24 +59,25 @@
 			src="images/profile.png">
 		</header>
 
-		<div class="ui grid content">
+		<div class="ui grid content window-height">
 
-		<div id="left" class="twelve wide column">
+		<div id="left" class="twelve wide column scroll">
 
-			<div id="calAndKey" class="ui grid flex horizontal">
-				<div id="calendar" class="ui segment eleven wide column">
+			<div id="calAndKey" class="ui grid flex horizontal bottom-spacing">
+				<div id="calendar" class="ui segment eleven wide column space">
 
 				</div>
 
-				<div id="keyLinks" class="ui segment three wide column">
+				<div id="keyLinks" class="ui segment items divided three wide column space text-center">
+					<p class="large">Key Links</p>
+					
+					<div ng-repeat="link in keyLinks" class="ui item" data-content="%%link.description%%" href="%%url%%">
+					   <div class="content">
+						<a class="link-title" href="%%link.url%%">%%link.title%%</a>
+				       </div>
+				    </div>
 
-					<div ng-repeat="link in keyLinks" class="ui segment application raised" data-content="{{link.description}}" href="{{url}}">
-					    <div class="content">
-					      <a class="header" ng-href="{{link.url}}">{{link.title}}</a>
-					      	<div class="ui star rating" data-rating="0" data-max-rating="1">
-					        </div>
-					    </div>
-				  	</div>
+
 
 				</div>
 			</div>
@@ -103,16 +114,16 @@
 
 			</div>
 
-			<div id="applications" class="invisible">
+			<div id="applications" class="invisible flex">
 
 				<div class="app-container ui segment flex-wrap">
 
 				{{#each links}}
 
 				  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
-				    <div class="content" >
+				    <div class="content flex horizontal space-between" >
 				      <a class="header" href="{{url}}">{{title}}</a>
-				      	<div class="ui star rating" data-rating="0" data-max-rating="1">
+				      	<div class="ui star rating" data-rating="0" data-max-rating="1" ng-click="addLink({{@index}})">
 				        </div>
 				    </div>
 				  </div>
@@ -129,7 +140,7 @@
 
 
 
-			<div id="news" class="border-left four wide column flex vertical">
+			<div id="news" class="border-left four wide column flex vertical window-height scroll">
 				<div class="feed border-bottom">Feed</div>
 
 				<div class="ui divided comments">

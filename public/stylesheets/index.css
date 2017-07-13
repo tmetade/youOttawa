@@ -109,12 +109,6 @@
     padding-right: 1rem !important;
 }
 
-#applications{
-	overflow: scroll;
-    height: calc(100% - 45px);
-}
-
-
 .ui.application{
 	width: 200px !important;
     height: 65px !important;
@@ -155,7 +149,7 @@ a.header{
 }
 
 .invisible{
-	visibility: hidden;
+	display: none !important;
 }
 
 .width80p{
@@ -165,4 +159,49 @@ a.header{
 .button-toggle{
 	background-color: #99162e !important;
     color: #fff !important;
+}
+
+.window-height{
+	    height: calc(100% - 45px);
+}
+
+.scroll{
+	 overflow-y: scroll;
+}
+
+.bottom-spacing{
+	margin-bottom: 15px !important;
+}
+
+.space{
+	margin:20px !important;
+}
+
+
+.large{
+	font-size:1.3em;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.link-title{
+	font-size: 1.17em;
+}
+
+.absolute{
+    position:absolute !important;
+}
+
+.left20{
+    left:20px;
+}
+
+.height30{
+    height:30px;
+}
+
+.space-between{
+    justify-content: space-between;
 }
