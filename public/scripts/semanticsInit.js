@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		$('.ui.search')
 		  .search({
-		    source: applications
+		    source: applications,
+		    maxResults: 4
 		  });
 	});
 
