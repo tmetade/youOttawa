@@ -1,106 +1,159 @@
 <html ng-app="youottawa">
 	<head>
 	<title>{{title}}</title>
-	<link rel="stylesheet" type="text/css" href="dist/semantic.css">
+	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+ 	<script src="scripts/date.js"></script>
+
 	<script src="dist/semantic.min.js"></script>
 	<script src="scripts/semanticsInit.js"></script>
 
 	<script src="scripts/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-
+	<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 
 	</head>
 
 	<body ng-controller="mainController">
 		<header class="maroon-bg header-height border-bottom flex centered">
+
+		<div class="ui search absolute left20">
+		  <div class="ui icon input height30">
+		    <input class="prompt" type="text" placeholder="Search applications...">
+		    <i class="search icon"></i>
+		  </div>
+		  <div class="results scroll"></div>
+		</div>
+
 			<img id="header-logo" src="images/youOttawa.png">
 			<img id="profile" data-html="
-			<div class='ui grid content'>
-				<div class='five wide column no-margin-top no-margin-bottom'>
-					<img class='profilePic' src='images/rohan.jpg'>
-				</div>
-				<div class='eleven wide column no-margin-top no-margin-bottom'>
-					<table class='studentInfo'>
-						<tr style='padding-bottom:5px;'>
-							<td>Name:</td>
-							<td>Rohan Kanjani<td>
-						</tr>
-						<tr>
-							<td style='padding-right:5px;'>Student #:</td>
-							<td>1234567<td>
-						</tr>
-						<tr>
-							<td>Email:</td>
-							<td>rkanj123@uottawa.ca<td>
-						</tr>
-						<tr>
-							<td>Faculty of Arts</td>
-						</tr>
-						<tr>
-							<td>Major - English</td>
-						</tr>
-					</table>
-					<hr>
+
+			<div class='ui items profile-section'>
+			  <div class='item'>
+				    <div class='image'>
+				      <img width='120px' class='profilePic' src='/images/rohan.jpg'>
+				    </div>
+				    <div class='content'>
+				      <a class='header'>Rohan Kanjani</a>
+				      <div class='meta'>
+				        <span>
+				        7777612
+				        <br>
+				        rkanj017@uottawa.ca
+				        </span>
+				      </div>
+				      <div class='description'>
+				        <p>Software Engineering
+				        <br>
+				        4rd year</p>
+				      </div>
+				      <div class='extra'>
+				        31 credits
+				      </div>
+				    </div>
+				    <hr>
 					<form class='ui large form' method='post' action='/logout'>
 					<!-- <div class='ui fluid large white-text submit button'> -->
 						<button class='ui fluid button' name='logout'>Logout</button>
 					
 					</div>
-				</div>
+			  </div>
+
 			</div>"
 			src="images/profile.png">
 		</header>
 
-		<div class="ui grid content">
+		<div class="ui grid content window-height">
 
-		<div id="left" class="twelve wide column">
+		<div id="left" class="twelve wide column scroll">
 
 			<div id="calAndKey" class="ui grid flex horizontal">
-				<div id="calendar" class="ui segment eleven wide column">
+				<div id="calendar" class="ui segment space eleven wide column">
+					<div class="ledge cal-header header-spacing flex horizontal space-between">
+						<p class="large">Calendar</p>
 
+						<i class="angle up icon"></i>
+					</div>
+					<div class="drawer">
+						<iframe id="calendar" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tmeta088%40uottawa.ca&amp;color=%235F6B02&amp;ctz=America%2FToronto" style="border-width:0" height="300"  frameborder="0" scrolling="no"></iframe>
+					</div>
 				</div>
 
-				<div id="keyLinks" class="ui segment three wide column">
+				<div id="keyLinks" class="ui segment three wide column space text-center full-width">
+					<div class="ledge link-header header-spacing flex horizontal space-between">
+						<p class="large">Key Links</p>
 
-					<div ng-repeat="link in keyLinks" class="ui segment application raised" data-content="{{link.description}}" href="{{url}}">
-					    <div class="content">
-					      <a class="header" ng-href="{{link.url}}">{{link.title}}</a>
-					      	<div class="ui star rating" data-rating="0" data-max-rating="1">
-					        </div>
+						<i class="angle up icon"></i>
+					</div>
+					<div class="ui items divided drawer ">
+						<div ng-repeat="link in keyLinks" class="ui item" data-content="%%link.description%%" href="%%url%%">
+						   <div class="content">
+							<a class="link-title" href="%%link.url%%">%%link.title%%</a>
+					       </div>
 					    </div>
-				  	</div>
-
+					</div>
 				</div>
 			</div>
 
+			<div id="gmailRow" class="flex horizontal space no-space-top">
+				<div id="gmail" class="ui segment full-width">
+					<div class="ledge g-header flex horizontal space-between">
+						<p class="large lh">uOttawa Gmail</p>
 
-			<div class="centered">
+						<div class="flex horizontal lh flex-end">
+						    <button class="ui positive button" id="authorize-button" >Authorize</button>
+		    				<button class="ui positive button negative " id="signout-button" >Sign Out</button>
 
-				<button id="appsToggle" class="ui toggle button width80p ">
-				  View all applications
-				</button>
+		    				<i class="angle up icon"></i>
+	    				</div>
+					</div>
 
+					<div class="drawer top-space">
+				      <table class="ui celled table table-striped table-inbox hidden align-left">
+				        <thead>
+				          <tr>
+				            <th>From</th>
+				            <th>Subject</th>
+				            <th>Date/Time</th>
+				          </tr>
+				        </thead>
+				        <tbody></tbody>
+				      </table>
+				    </div>
+				</div>
 			</div>
 
-			<div id="applications" class="invisible">
+			<div id="applications" class="flex space no-space-top">
 
-				<div class="app-container ui segment flex-wrap">
+				<div class="app-container ui segment flex-wrap full-width">
+					
+					<div class="ledge app-header flex horizontal space-between full-width">
 
-				{{#each links}}
+						<p class="large">All applications</p>
 
-				  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
-				    <div class="content" >
-				      <a class="header" href="{{url}}">{{title}}</a>
-				      	<div class="ui star rating" data-rating="0" data-max-rating="1">
-				        </div>
-				    </div>
-				  </div>
+						<i class="angle down icon"></i>
 
-				{{/each}}
+					</div>
+
+					<div class="link-container invisible flex-wrap drawer">
+
+						{{#each links}}
+
+						  <div class="ui segment application raised" data-content="{{description}}" href="{{url}}">
+						    <div class="content flex horizontal space-between" >
+						      <a class="header" href="{{url}}">{{title}}</a>
+						      	<div class="ui star rating" data-rating="0" data-max-rating="1" ng-click="addLink({{@index}})">
+						        </div>
+						    </div>
+						  </div>
+
+						{{/each}}
+
+					</div>
 
 				</div>
 
@@ -109,29 +162,183 @@
 
 		</div>
 
-
-
-
-			<div id="news" class="border-left four wide column flex vertical">
+		
+			<div id="news" class="border-left four wide column flex vertical window-height scroll">
 				<div class="feed border-bottom">Feed</div>
 
 				<div class="ui divided comments">
-				{{#each feed}}
-				  <div class="comment">
-				    <div class="content">
-				      <a class="author" href="{{url}}">{{title}}</a>
-				      <div class="metadata">
-				        <div class="date">{{age}} via {{source}}</div>
-				      </div>
-				      <div class="text">
-				        {{time}} at {{location}} 
-				      </div>
-				    </div>
-				  </div>
 
-				{{/each}}
+					  <div ng-show="feed == null" class="ui active inverted dimmer">
+					    <div class="ui text loader">Fetching feed</div>
+					  </div>
+
+					  <div ng-repeat="article in feed" class="comment">
+					    <div class="content">
+					      <a class="author" href="%%article.url%%">%%article.title%%</a>
+					      <div class="metadata">
+					        <div class="date">%%article.age%% via %%article.source%%</div>
+					      </div>
+					      <div class="text">
+					        %%article.time%%
+					      </div>
+					    </div>
+					  </div>
+
 				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+//GMAIL API
+
+	// Client ID and API key from the Developer Console
+      var CLIENT_ID = '504330624418-0afein99vhgpp1fselqu25ps8acapdb1.apps.googleusercontent.com';
+
+      // Array of API discovery doc URLs for APIs used by the quickstart
+      var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
+
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      var SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
+
+      var authorizeButton = document.getElementById('authorize-button');
+      var signoutButton = document.getElementById('signout-button');
+
+      /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
+
+      /**
+       *  Initializes the API client library and sets up sign-in state
+       *  listeners.
+       */
+      function initClient() {
+        gapi.client.init({
+          discoveryDocs: DISCOVERY_DOCS,
+          clientId: CLIENT_ID,
+          scope: SCOPES
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        });
+      }
+
+      /**
+       *  Called when the signed in status changes, to update the UI
+       *  appropriately. After a sign-in, the API is called.
+       */
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          displayInbox();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
+
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick(event) {
+      	$(".ui.celled.table").remove();
+        gapi.auth2.getAuthInstance().signOut();
+      }
+      /**
+       * Displaying all the messages in the users inbox
+       */
+       function displayInbox() {
+        var request = gapi.client.gmail.users.messages.list({
+          'userId': 'me',
+          'labelIds': 'INBOX',
+          'maxResults': 10
+        });
+        request.execute(function(response) {
+          $.each(response.messages, function() {
+            var messageRequest = gapi.client.gmail.users.messages.get({
+              'userId': 'me',
+              'id': this.id
+            });
+            messageRequest.execute(appendMessageRow);
+          });
+        });
+      }
+      function appendMessageRow(message) {
+      	var date = getHeader(message.payload.headers, 'Date');
+
+
+        $('.table-inbox tbody').prepend(
+          '<tr>\
+            <td>'+getHeader(message.payload.headers, 'From')+'</td>\
+            <td>\
+              <a href="#message-modal-' + message.id +
+                '" data-toggle="modal" id="message-link-' + message.id+'">' +
+                getHeader(message.payload.headers, 'Subject') +
+              '</a>\
+            </td>\
+            <td>'+date.substring(date.indexOf(",") + 2, date.indexOf("2017") - 1)+'</td>\
+          </tr>'
+        );  
+      }
+      function getHeader(headers, index) {
+        var header = '';
+        $.each(headers, function(){
+          if(this.name === index){
+            header = this.value;
+          }
+        });
+        return header;
+      }
+      function getBody(message) {
+        var encodedBody = '';
+        if(typeof message.parts === 'undefined')
+        {
+          encodedBody = message.body.data;
+        }
+        else
+        {
+          encodedBody = getHTMLPart(message.parts);
+        }
+        encodedBody = encodedBody.replace(/-/g, '+').replace(/_/g, '/').replace(/\s/g, '');
+        return decodeURIComponent(escape(window.atob(encodedBody)));
+      }
+      function getHTMLPart(arr) {
+        for(var x = 0; x <= arr.length; x++)
+        {
+          if(typeof arr[x].parts === 'undefined')
+          {
+            if(arr[x].mimeType === 'text/html')
+            {
+              return arr[x].body.data;
+            }
+          }
+          else
+          {
+            return getHTMLPart(arr[x].parts);
+          }
+        }
+        return '';
+      }
+      </script>
+	 <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </html>
+
