@@ -72,5 +72,3 @@ youottawa.factory('FeedFactory', function($http) {
         return result.data;
     });
 });
-
-
